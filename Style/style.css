@@ -1,0 +1,168 @@
+/*
+
+-------------- Comando do SASS:
+
+1) sass --watch Styles/style.scss Styles/style.css
+2) ctrl+c para sair
+
+-------------- Passos para dar commit no github:
+
+1) git init
+2) git checkout -b "nomeDoNovoBranch"
+3) git add .
+4) git commit -m "header-css-done"
+5) git push origin nomeDoNovoBranch
+6) git checkout master
+7) git pull 
+8) git branch -D nomeDoNovoBranch
+9) ### Voltar para a etapa 2 ###
+
+*/
+/*-----------------------------------------------------------
+----------------Resetando os estilos do HTML-----------------
+-----------------------------------------------------------*/
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Arial", Georgia, serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 10%;
+  border-radius: 5px;
+}
+
+/*-----------------------------------------------------------
+-------------------------Grid-Geral--------------------------
+-----------------------------------------------------------*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "header header header" "main main main" ". sobre ." ". habilidades ." ". portfolio ." ". educacao ." "footer footer footer";
+}
+
+/*-----------------------------------------------------------
+---------------------------Header----------------------------
+-----------------------------------------------------------*/
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  font-size: 1.125em;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.header nav a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header li + li {
+  margin-left: 20px;
+}
+
+.nav-bar-links-5 {
+  background: url(imagens/brasil.png);
+}
+
+.nav-bar-links-6 {
+  background: url(imagens/england.png);
+}
+
+/*-----------------------------------------------------------
+-----------------------------Main----------------------------
+-----------------------------------------------------------*/
+.main {
+  grid-area: main;
+}
+
+/*-----------------------------------------------------------
+---------------------------Sections--------------------------
+-----------------------------------------------------------*/
+.sobre {
+  grid-area: sobre;
+  background: white;
+  display: flex;
+  padding: 15px;
+  height: 200px;
+  width: 1000px;
+  box-shadow: 1px 1px 1px 1px #c9c5c5;
+}
+
+.sobre-resumo {
+  width: 400px;
+}
+
+.sobre-resumo p {
+  margin-top: 20px;
+}
+
+.sobre-info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 130px;
+}
+
+.sobre-info p {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.sobre-info-ask p {
+  font-weight: bold;
+}
+
+.sobre-info-resp {
+  margin-top: 25px;
+  margin-left: -45px;
+}
+
+.habilidades {
+  grid-area: habilidades;
+}
+
+.portfolio {
+  grid-area: portfolio;
+}
+
+.educacao {
+  grid-area: educacao;
+}
+
+/*-----------------------------------------------------------
+---------------------------Footer----------------------------
+-----------------------------------------------------------*/
+.footer {
+  grid-area: footer;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,394 @@
+/*
+
+-------------- Comando do SASS:
+
+1) sass --watch Styles/style.scss Styles/style.css
+2) ctrl+c para sair
+
+-------------- Passos para dar commit no github:
+
+1) git init
+2) git checkout -b "nomeDoNovoBranch"
+3) git add .
+4) git commit -m "header-css-done"
+5) git push origin nomeDoNovoBranch
+6) git checkout master
+7) git pull 
+8) git branch -D nomeDoNovoBranch
+9) ### Voltar para a etapa 2 ###
+
+*/
+
+/*-----------------------------------------------------------
+----------------Resetando os estilos do HTML-----------------
+-----------------------------------------------------------*/
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-family: "Arial", Georgia, serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 10%;
+  border-radius: 5px;
+}
+
+/*-----------------------------------------------------------
+-------------------------Grid-Geral--------------------------
+-----------------------------------------------------------*/
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    ". sobre ."
+    ". habilidades ."
+    ". portfolio ."
+    ". educacao ."
+    "footer footer footer";
+}
+
+/*-----------------------------------------------------------
+---------------------------Header----------------------------
+-----------------------------------------------------------*/
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.dia {
+  width: 35px;
+  height: 35px;
+}
+.bandeira {
+  width: 35px;
+}
+
+.inglaterra {
+  margin-right: 15px;
+}
+
+.brasil {
+  margin-right: 5px;
+}
+.nav-bar {
+  display: flex;
+  justify-content: end;
+}
+
+.bandeira:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header nav ul {
+  display: flex;
+}
+
+.header nav a {
+  padding: 10px;
+  align-content: center;
+  color: white;
+  font-size: 1.125em;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+.header nav a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header li + li {
+  margin-left: 20px;
+}
+
+.tema {
+  transition: 0.1s;
+  margin-left: 15px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.nav-bar-links-5 {
+  margin-right: -115px;
+}
+.nav-bar-links-6 {
+  margin-right: -100px;
+}
+
+/*-----------------------------------------------------------
+-----------------------------Main----------------------------
+-----------------------------------------------------------*/
+
+.main {
+  grid-area: main;
+  height: 550px;
+}
+[data-anime] {
+  opacity: 0;
+  transition: 1s;
+}
+[data-anime="down"] {
+  transform: translate3d(0px,-50px,0px);
+}
+
+[data-anime].animate {
+  opacity:1;
+  transform: translate3d(0px,0px,0px)
+}
+
+
+
+.fundo {
+  width:100%;
+  height:100%;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -350px;
+  color: white;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: neon 2s alternate infinite ease-in-out;
+}
+
+@keyframes neon {
+  from {
+    filter: drop-shadow(0 0 0 #8844ee);
+  }
+  to {
+    filter:drop-shadow(0 0 30px #8844ee);
+  }
+}
+
+.principal {
+  font-weight: bolder;
+  text-shadow:1px 1px #8844ee;
+}
+.nome {
+  margin-top: 20px;
+  font-size: 40px;
+}
+.contatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #8844ee, #894ce6);
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.contatar:hover {
+  filter:drop-shadow(5px 5px 5px #8844ee);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.redes {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #8844ee;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.redes:hover {
+  filter:drop-shadow(5px 5px 5px #8844ee);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+/*-----------------------------------------------------------
+---------------------------Sections--------------------------
+-----------------------------------------------------------*/
+[data-anime].active {
+  .bar {
+    margin-left: -15px;
+    background-color: rgb(39, 38, 38);
+    width: 350px;
+    margin-top: 5px;
+    height: 10px;
+    color: white;
+  }
+  .bar .progress-bar1{
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+   width: 10%;
+   animation: progress-animation1 3s forwards ;
+  
+   animation-play-state: running;
+  }
+
+  
+   .bar .progress-bar4{
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    width: 10%;
+    animation: progress-animation2 3s forwards ;
+   
+    animation-play-state: running;
+   }
+  
+  @-moz-keyframes progress-animation1{
+    from {margin-left:0%;}
+    to {margin-right:100%;width:60%}
+  }
+
+  @-moz-keyframes progress-animation2{
+    from {margin-left:0%;}
+    to {margin-right:100%;width:20%}
+  }
+}
+.sobre {
+  grid-area: sobre;
+  background: white;
+  margin-top: 50px;
+  margin-left: 110px;
+  display: flex;
+  padding: 15px;
+  height: 220px;
+  width: 1200px;
+  box-shadow: 1px 1px 1px 1px rgb(201, 197, 197);
+}
+
+.sobre-resumo {
+  width: 550px;
+}
+
+.sobre-resumo p {
+  margin-top: 20px;
+}
+
+.sobre-info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 130px;
+}
+
+.sobre-info p {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.sobre-info-ask p {
+  font-weight: bold;
+}
+.sobre-info-resp {
+  margin-top: 25px;
+  margin-left: -45px;
+}
+
+.habilidades {
+  grid-area: habilidades;
+  width: 1230px;
+  margin-left: 110px;  
+}
+
+.habilidades h2 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-right: 108px;
+}
+
+.habilidades-itens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 230px;
+  color: black;
+  box-shadow: 1px 1px 1px 1px rgb(201, 197, 197);
+}
+
+.habilidade-1 {
+  height: 50px;
+  width: 100px;
+}
+.habilidade-2 {
+  height: 50px;
+  width: 100px;
+}
+.habilidade-3 {
+  height: 50px;
+  width: 100px;
+}
+
+.habilidades-itens div{
+  padding:15px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.portfolio {
+  grid-area: portfolio;
+  width: 1030px;
+}
+.portfolio h2 {
+  margin-top: 110px;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-left: -15px;
+}
+
+.portfolio-itens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.portfolio img {
+ padding:10px;
+ width: 96%;
+ height: 400px;
+ margin-top: -10px;
+}
+
+.educacao {
+  grid-area: educacao;
+}
+
+/*-----------------------------------------------------------
+---------------------------Footer----------------------------
+-----------------------------------------------------------*/
+
+.footer {
+  grid-area: footer;
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: rgb(92, 91, 91);
+}
