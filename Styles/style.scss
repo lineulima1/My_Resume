@@ -75,6 +75,7 @@ img {
   z-index: 1;
 }
 .dia {
+  opacity: 0;
   width: 35px;
   height: 35px;
 }
@@ -324,10 +325,12 @@ img {
 }
 
 .habilidades h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 80px;
   margin-bottom: 40px;
   text-align: center;
-  margin-right: 108px;
 }
 
 .habilidades-itens {
@@ -364,8 +367,9 @@ img {
   margin-left: 395px;  
 }
 .portfolio h2 {
-text-align: center;
-margin-left: -105px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
 margin-top: 80px;
 margin-bottom: 60px;
 }
