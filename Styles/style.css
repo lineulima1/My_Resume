@@ -370,6 +370,8 @@ img {
 }
 
 .portfolio {
+  margin-left: auto;
+  margin-right: auto;
   grid-area: portfolio;
   width: 1230px;
   margin-left: 395px;
@@ -428,6 +430,8 @@ img {
   grid-area: educacao;
   width: 1230px;
   margin-left: 395px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .educacao h2 {
