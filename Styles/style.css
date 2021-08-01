@@ -136,7 +136,7 @@ img {
 -----------------------------------------------------------*/
 .main {
   grid-area: main;
-  height: 550px;
+  height: 50%;
 }
 
 [data-anime] {
@@ -286,23 +286,28 @@ img {
 }
 
 .sobre {
+  margin-top: -30%;
   grid-area: sobre;
   background: white;
-  margin-top: 50px;
-  margin-left: 110px;
   display: flex;
-  padding: 15px;
-  height: 220px;
-  width: 1200px;
+  height: 250px;
+  width: 100%;
   box-shadow: 1px 1px 1px 1px #c9c5c5;
 }
 
 .sobre-resumo {
-  width: 550px;
+  width: 50%;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .sobre-resumo p {
   margin-top: 20px;
+}
+
+.sobre-info-titulo {
+  margin-top: 15px;
 }
 
 .sobre-info {
@@ -321,14 +326,13 @@ img {
 }
 
 .sobre-info-resp {
-  margin-top: 25px;
+  margin-top: 41px;
   margin-left: -45px;
 }
 
 .habilidades {
   grid-area: habilidades;
-  width: 1230px;
-  margin-left: 110px;
+  width: 100%;
 }
 
 .habilidades h2 {
@@ -370,11 +374,8 @@ img {
 }
 
 .portfolio {
-  margin-left: auto;
-  margin-right: auto;
   grid-area: portfolio;
-  width: 1230px;
-  margin-left: 395px;
+  width: 100%;
 }
 
 .portfolio h2 {
@@ -389,27 +390,62 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-.projeto {
-  width: 600px;
-  margin-left: 15px;
-  margin-right: 15px;
+.projeto1 {
+  width: 100%;
+  height: 320px;
   border: 1px solid #b07dfb;
+  margin-right: 8px;
+}
+
+.projeto2 {
+  width: 100%;
+  height: 320px;
+  border: 1px solid #b07dfb;
+  margin-left: 8px;
 }
 
 .middle1 {
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
-  margin-left: 15px;
-  margin-top: -316px;
+  margin-top: -325px;
   background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
   font-size: 30px;
   color: white;
-  width: 95.1%;
-  height: 98.3%;
+  width: 100.1%;
+  height: 98.4%;
+}
+
+.middle2 {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  margin-top: -325px;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-left: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  width: 100.1%;
+  height: 98.4%;
+}
+
+.middle2 h4 {
+  margin-top: 140px;
+  animation: neon 1s alternate infinite ease-in-out;
+}
+
+.middle2 h4:hover {
+  color: blueviolet;
+}
+
+.middle2:hover {
+  opacity: 1;
+  text-align: center;
 }
 
 .middle1 h4 {
@@ -428,7 +464,7 @@ img {
 
 .educacao {
   grid-area: educacao;
-  width: 1230px;
+  width: 66.9%;
   margin-left: 395px;
   margin-left: auto;
   margin-right: auto;
