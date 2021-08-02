@@ -34,7 +34,7 @@ function English() {
         this.nav3 = document.querySelector('.link3')
         this.nav4 = document.querySelector('.link4')
         this.profissao = document.querySelector('.profissao')
-        this.contact = document.querySelector('.contatar')
+        this.contatar = document.querySelector('.main-btn')
         this.sobre_titulo = document.querySelector('.sobre-titulo')
         this.sobre_para1 = document.querySelector('.sobre-para-1')
         this.sobre_para2 = document.querySelector('.sobre-para-2')
@@ -76,7 +76,7 @@ function English() {
             this.nav3.innerHTML = 'Portfolio'
             this.nav4.innerHTML = 'Education'
             this.profissao.innerHTML = 'Front-end Developer'
-            this.contact.innerHTML = 'Contact me'
+            this.contatar.innerHTML = 'Contact me'
             this.sobre_titulo.innerHTML = 'About me'
             this.sobre_para1.innerHTML = 'I am so dedicated to evolving my knowledge in this area, in addition to constantly testing myself with new challenges. I am looking for new opportunities to start my career and develop my skills in practice.'
             this.sobre_para2.innerHTML = 'Passionate about philosophy, technology and innovation.'
@@ -114,7 +114,7 @@ function English() {
             this.nav3.innerHTML = 'Portfólio'
             this.nav4.innerHTML = 'Educação'
             this.profissao.innerHTML = 'Desenvolvedor Front-end'
-            this.contact.innerHTML = 'Contate-me'
+            this.contatar.innerHTML = 'Contate-me'
             this.sobre_titulo.innerHTML = 'Sobre mim'
             this.sobre_para1.innerHTML = 'Sou muito dedicado em evoluir meus conhecimentos na área, além de me testar constantemente com desafios, estou procurando oportunidades para começar minha carreira e desenvolver minhas habilidades na prática.'
             this.sobre_para2.innerHTML = 'Apaixonado por filosofia,tecnologia e inovação.'
