@@ -123,9 +123,6 @@ img {
   transition: 0.1s;
   margin-left: 15px;
 }
-.header-tema:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
 
 /*-----------------------------------------------------------
 -----------------------------Main----------------------------
@@ -245,7 +242,7 @@ img {
 [data-anime].active .bar {
   margin-left: -15px;
   background-color: #272626;
-  width: 350px;
+  width: 45%;
   margin-top: 5px;
   height: 10px;
   color: white;
@@ -262,7 +259,7 @@ img {
   animation: progress-animation2 3s forwards;
   animation-play-state: running;
 }
-@-moz-keyframes progress-animation1 {
+@keyframes progress-animation1 {
   from {
     margin-left: 0%;
   }
@@ -271,7 +268,7 @@ img {
     width: 60%;
   }
 }
-@-moz-keyframes progress-animation2 {
+@keyframes progress-animation2 {
   from {
     margin-left: 0%;
   }
@@ -522,6 +519,173 @@ img {
   align-items: center;
   height: 100px;
   color: #5c5b5b;
+}
+
+@media screen and (max-width: 376px) {
+  .header {
+    height: 10%;
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .brasil {
+    margin-top: 75%;
+    position: relative;
+  }
+
+  .header-bandeira {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-nav-bar {
+    position: absolute;
+  }
+
+  .main {
+    max-width: 376px;
+    min-width: 376px;
+    height: 400px;
+  }
+
+  /*-----------------------------------------------------------
+  ---------------------------Sobre----------------------------
+  -----------------------------------------------------------*/
+  .sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 290px;
+    min-width: 290px;
+    height: 500px;
+    margin-left: 25px;
+    margin-top: 50px;
+  }
+
+  .sobre-titulo {
+    text-align: start;
+    font-size: 20px;
+  }
+
+  .sobre-para-1 {
+    width: 250px;
+    margin-left: -50%;
+    font-size: 14px;
+  }
+
+  .sobre-para-2 {
+    width: 250px;
+    margin-left: -50%;
+    font-size: 14px;
+  }
+
+  .sobre-info-titulo {
+    font-size: 20px;
+    width: 260px;
+  }
+
+  .sobre-info-perg p {
+    margin-left: -10%;
+    font-size: 12px;
+  }
+
+  .sobre-info-resp {
+    margin-top: 37px;
+  }
+
+  .sobre-info-resp p {
+    margin-left: -120%;
+    font-size: 12px;
+  }
+
+  /*-----------------------------------------------------------
+  ---------------------------Skills----------------------------
+  -----------------------------------------------------------*/
+  .habilidade-titulo {
+    font-size: 20px;
+    margin-left: 25px;
+  }
+
+  .habilidades-itens {
+    display: flex;
+    flex-direction: column;
+    max-width: 290px;
+    min-width: 290px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+  }
+
+  [data-anime].active .bar {
+    background-color: #272626;
+    width: 75%;
+    margin-top: 5px;
+    height: 10px;
+    color: white;
+  }
+
+  @keyframes progress-animation2 {
+    from {
+      margin-left: 0%;
+    }
+    to {
+      margin-right: 100%;
+      width: 30%;
+    }
+  }
+  .habilidade-2 {
+    margin-top: 13px;
+  }
+
+  .habilidade-3 {
+    margin-top: 13px;
+  }
+
+  .habilidade-4 {
+    margin-top: 13px;
+  }
+
+  /*-----------------------------------------------------------
+  ---------------------------portfolio----------------------------
+  -----------------------------------------------------------*/
+  .portfolio-itens {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    max-width: 300px;
+    height: 100%;
+    margin-left: -140px;
+  }
+
+  .portfolio-projeto-1 {
+    margin-bottom: 50px;
+  }
+
+  .portfolio-projeto-2 {
+    margin-left: 165px;
+  }
+
+  .portfolio-projeto-1-vejamais {
+    width: 0px;
+    height: 0px;
+  }
+
+  .portfolio-projeto-2-vejamais {
+    width: 0px;
+    height: 0px;
+  }
+
+  /*-----------------------------------------------------------
+  ---------------------------educacao----------------------------
+  -----------------------------------------------------------*/
+  .educacao-itens {
+    max-width: 300px;
+    min-width: 300px;
+    font-size: 12px;
+    margin-left: -25px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
