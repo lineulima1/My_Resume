@@ -8,9 +8,7 @@ function animeScroll() {
  target.forEach(function(el) {
      if((windowTop) > el.offsetTop) {
          el.classList.add(animationClass);
-         el.classList.add('active')
-         
-
+         el.classList.add('active')        
      } else {
          el.classList.remove(animationClass);
          el.classList.remove('active')
@@ -28,42 +26,46 @@ window.addEventListener('scroll', debounce(function() {
 
 
 function English() {
+    this.inglaterra = document.querySelector('.inglaterra')
+    this.brasil = document.querySelector('.brasil')
+    this.nav1 = document.querySelector('.link1')
+    this.nav2 = document.querySelector('.link2')
+    this.nav3 = document.querySelector('.link3')
+    this.nav4 = document.querySelector('.link4')
+    this.profissao = document.querySelector('.profissao')
+    this.contatar = document.querySelector('.main-btn')
+    this.sobre_titulo = document.querySelector('.sobre-titulo')
+    this.sobre_para1 = document.querySelector('.sobre-para-1')
+    this.sobre_para2 = document.querySelector('.sobre-para-2')
+    this.sobre_info_titulo = document.querySelector('.sobre-info-titulo')
+    this.sobre_info_p1 = document.querySelector('.sobre-info-p1')
+    this.sobre_info_p2 = document.querySelector('.sobre-info-p2')
+    this.sobre_info_p3 = document.querySelector('.sobre-info-p3')
+    this.sobre_info_p4 = document.querySelector('.sobre-info-p4')
+    this.sobre_info_p5 = document.querySelector('.sobre-info-p5')
+    this.sobre_resp_p1 = document.querySelector('.sobre-resp-p1')
+    this.sobre_resp_p2 = document.querySelector('.sobre-resp-p2')
+    this.sobre_resp_p3 = document.querySelector('.sobre-resp-p3')
+    this.sobre_resp_p4 = document.querySelector('.sobre-resp-p4')
+    this.sobre_resp_p5 = document.querySelector('.sobre-resp-p5')
+    this.habilidade_titulo = document.querySelector('.habilidade-titulo')
+    this.habilidade_level1 = document.querySelector('.habilidade-1-level')
+    this.habilidade_level2 = document.querySelector('.habilidade-2-level')
+    this.habilidade_level3 = document.querySelector('.habilidade-3-level')
+    this.habilidade_level4 = document.querySelector('.habilidade-4-level')
+    this.portfolio_titulo = document.querySelector('.portfolio-titulo')
+    this.vejamais1 = document.querySelector('.projeto-1-h4')
+    this.vejamais2 = document.querySelector('.projeto-2-h4')
+    this.educacao_titulo = document.querySelector('.educacao_titulo')
+    this.educacao_graduacao1 = document.querySelector('.educacao-graduacao1')
+    this.educacao_graduacao2 = document.querySelector('.educacao-graduacao2')
+    this.educacao_graduacao_info1 = document.querySelector('.educacao-graduacao-info1')
+    this.educacao_graduacao_info2 = document.querySelector('.educacao-graduacao-info2')
+    this.footer_p1 = document.querySelector('.footer-p1')
+    this.footer_p2 = document.querySelector('.footer-p2')
+    
+    
     this.inicia = () => {
-        this.nav1 = document.querySelector('.link1')
-        this.nav2 = document.querySelector('.link2')
-        this.nav3 = document.querySelector('.link3')
-        this.nav4 = document.querySelector('.link4')
-        this.profissao = document.querySelector('.profissao')
-        this.contatar = document.querySelector('.main-btn')
-        this.sobre_titulo = document.querySelector('.sobre-titulo')
-        this.sobre_para1 = document.querySelector('.sobre-para-1')
-        this.sobre_para2 = document.querySelector('.sobre-para-2')
-        this.sobre_info_titulo = document.querySelector('.sobre-info-titulo')
-        this.sobre_info_p1 = document.querySelector('.sobre-info-p1')
-        this.sobre_info_p2 = document.querySelector('.sobre-info-p2')
-        this.sobre_info_p3 = document.querySelector('.sobre-info-p3')
-        this.sobre_info_p4 = document.querySelector('.sobre-info-p4')
-        this.sobre_info_p5 = document.querySelector('.sobre-info-p5')
-        this.sobre_resp_p1 = document.querySelector('.sobre-resp-p1')
-        this.sobre_resp_p2 = document.querySelector('.sobre-resp-p2')
-        this.sobre_resp_p3 = document.querySelector('.sobre-resp-p3')
-        this.sobre_resp_p4 = document.querySelector('.sobre-resp-p4')
-        this.sobre_resp_p5 = document.querySelector('.sobre-resp-p5')
-        this.habilidade_titulo = document.querySelector('.habilidade-titulo')
-        this.habilidade_level1 = document.querySelector('.habilidade-1-level')
-        this.habilidade_level2 = document.querySelector('.habilidade-2-level')
-        this.habilidade_level3 = document.querySelector('.habilidade-3-level')
-        this.habilidade_level4 = document.querySelector('.habilidade-4-level')
-        this.portfolio_titulo = document.querySelector('.portfolio-titulo')
-        this.vejamais1 = document.querySelector('.projeto-1-h4')
-        this.vejamais2 = document.querySelector('.projeto-2-h4')
-        this.educacao_titulo = document.querySelector('.educacao_titulo')
-        this.educacao_graduacao1 = document.querySelector('.educacao-graduacao1')
-        this.educacao_graduacao2 = document.querySelector('.educacao-graduacao2')
-        this.educacao_graduacao_info1 = document.querySelector('.educacao-graduacao-info1')
-        this.educacao_graduacao_info2 = document.querySelector('.educacao-graduacao-info2')
-        this.footer_p1 = document.querySelector('.footer-p1')
-        this.footer_p2 = document.querySelector('.footer-p2')
 
         this.capturaCliques();
       };
@@ -71,6 +73,8 @@ function English() {
         document.addEventListener('click', e => {
           const el = e.target;
           if (el.classList.contains('inglaterra')) {
+            this.inglaterra.classList.add('ativo')
+            this.brasil.classList.remove('ativo')
             this.nav1.innerHTML = 'About'
             this.nav2.innerHTML = 'Skills'
             this.nav3.innerHTML = 'Portfolio'
@@ -109,6 +113,8 @@ function English() {
         }
      
         if (el.classList.contains('brasil')) {
+            this.inglaterra.classList.remove('ativo')
+            this.brasil.classList.add('ativo')
             this.nav1.innerHTML = 'Sobre'
             this.nav2.innerHTML = 'Habilidades'
             this.nav3.innerHTML = 'Portfólio'
@@ -145,11 +151,34 @@ function English() {
             this.footer_p1.innerHTML = '®Desenvolvido por Lineu Lima.'
             this.footer_p2.innerHTML = 'Todos direitos resevados ©'
         }
-
-
+         if(el.classList.contains('link1')) {
+             el.classList.add('ativo')
+             this.nav2.classList.remove('ativo')
+             this.nav3.classList.remove('ativo')
+             this.nav4.classList.remove('ativo')
+         }
+         if(el.classList.contains('link2')) {
+            el.classList.add('ativo')
+            this.nav1.classList.remove('ativo')
+            this.nav3.classList.remove('ativo')
+            this.nav4.classList.remove('ativo')
+        }
+        if(el.classList.contains('link3')) {
+            el.classList.add('ativo')
+            this.nav1.classList.remove('ativo')
+            this.nav2.classList.remove('ativo')
+            this.nav4.classList.remove('ativo')
+        }
+        if(el.classList.contains('link4')) {
+            el.classList.add('ativo')
+            this.nav1.classList.remove('ativo')
+            this.nav2.classList.remove('ativo')
+            this.nav3.classList.remove('ativo')
+        }
         }
         );
       };
+      
 }
 
 const english = new English();
