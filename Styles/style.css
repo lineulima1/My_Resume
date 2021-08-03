@@ -577,6 +577,7 @@ img {
   }
 
   .header-bandeira {
+    margin-left: -15%;
     display: flex;
     flex-direction: column;
   }
@@ -588,6 +589,10 @@ img {
   .main {
     width: 100%;
     height: 400px;
+  }
+
+  .main-fundo {
+    width: 120%;
   }
 
   /*-----------------------------------------------------------
