@@ -521,7 +521,7 @@ img {
   color: #5c5b5b;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 600px) {
   .header {
     height: 10%;
     font-size: 10px;
@@ -543,8 +543,7 @@ img {
   }
 
   .main {
-    max-width: 376px;
-    min-width: 376px;
+    width: 100%;
     height: 400px;
   }
 
